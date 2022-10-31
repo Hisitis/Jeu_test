@@ -4,6 +4,7 @@ fprintf(player_name);
 disp(' avez-vous des données de sauvergardes ?')
 save = input('1=oui, 2=non : ');
 
+%gestion des données de sauvergardes
 while true
     difficulty=1;
     if save==1
@@ -73,6 +74,8 @@ if load==526427
    
     disp('souhaitez-vous suivre le tutoriel ?')
     tuto    =   input('1=oui, 2=non : ');
+        
+        %tutoriel
         if tuto==1
             disp(['tout au long de l''aventure, des codes de sauvergardes' ...
                 ' vous serons donnés afin de reprendre l''histoire ' ...
@@ -87,6 +90,17 @@ if load==526427
             disp(['Si ce nombre est ' ...
                 'inférieur ou égal à 10, l''action est impossible, au-delà,' ...
                 'l''action est un succès.'])
+            disp('faisons un essaie !')
+            fprintf(player_name)
+            disp([' Vous êtes dans une taverne, un homme étrange en veste blache' ...
+                'vient vers vous. "Bonjour, mon nom est Wahon Jetours ! ' ...
+                'J''aurais besoin de vouspour une quête !"'])
+            disp('Que souhaitez-vous faire?')
+            a=input('1=accepter, 2=refuser : ');
+                if  a==1
+                    disp('"AH, tant mieux!"')
+                end
+                
             
         end
 end
